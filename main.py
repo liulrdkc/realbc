@@ -1,6 +1,9 @@
 import os
-from digest import Diges
+import codecs
+from digest import Digest
+from rbc_sha import RbcSha
+
 
 if '__main__' == __name__:
     print('hello world')
-    print(Digest.sha256(''))
+    print(codecs.encode(RbcSha.sha256(''), 'hex'))
